@@ -1,0 +1,9 @@
+# Use the official WordPress image as base
+FROM wordpress:latest
+
+# Copy custom Nginx configuration files
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY default.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80
